@@ -5,6 +5,7 @@
 \usepackage{titlesec}
 \usepackage{qtree}
 
+
 \titleformat{\section}
 	{\normalfont\fontsize{12}{15}\bfseries}{\makebox[40pt][l]{\thesection}}{0pt}{}
 \titleformat{\subsection}
@@ -16,9 +17,26 @@
 \titlespacing*{\subsection}{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
 \titlespacing*{\subsubsection}{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
 
+\newcommand{\titletext}[1]
+	{\begin{center}
+			\textbf{#1}
+	\end{center}}
+
+\newcommand{\headertext}[4]
+	{\begin{flushleft}
+		   #1
+		\\ #2
+		\\ #3
+		\\ #4
+	\end{flushleft}}
 
 \begin{document}
-	
+
+\headertext{Author Name}{Course Title}{Professor Name}{Date}
+
+\titletext{My Title}
+an introduction text section. this should have a space above it and none to the left.
+
 \section{Test}
 now I'm writing some stuff in this section blah blah blah
 
