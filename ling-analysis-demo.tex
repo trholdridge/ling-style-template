@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+
+\usepackage[letterpaper, portrait, margin=1in]{geometry}
+\usepackage{newtxtext,newtxmath}
+\usepackage{titlesec}
+\usepackage{qtree}
+
+
+\setlength{\parindent}{0.5in}
+
+\titleformat{\section}
+{\normalfont\fontsize{12}{15}\bfseries}{\makebox[0.5in][l]{\thesection}}{0pt}{}
+\titleformat{\subsection}
+{\normalfont\fontsize{12}{15}\bfseries}{\makebox[0.5in][l]{\thesubsection}}{0pt}{}
+\titleformat{\subsubsection}
+{\normalfont\fontsize{12}{15}\bfseries}{\makebox[0.5in][l]{\thesubsubsection}}{0pt}{}
+
+\titlespacing*{\section}{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+\titlespacing*{\subsection}{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+\titlespacing*{\subsubsection}{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+
+
+\newcommand{\titletext}[1]
+{\begin{center}
+		\textbf{#1}
+\end{center}}
+
+\newcommand{\headertext}[4]
+{\begin{flushleft}
+		#1
+		\\ #2
+		\\ #3
+		\\ #4
+\end{flushleft}}
+
+
+\begin{document}
+	
+	\headertext{Tulasi Holdridge}{Linguistic Analysis}{Dr. Littlefield}{Last Updated: January 28, 2021}
+	
+	\titletext{Linguistic Analysis Template Demo}
+	Each section of this document is correlated to a section of the Linguistic Analysis style sheet. It serves two purposes---first, ``proving'' that this template conforms to the style sheet; second, explaining and demonstrating how to use any features that are LaTeX-specific (such as formatting commands that a user will need to know).
+	
+	In addition to the sections which directly match the stylesheet, there is a section at the end (before the conclusion) explaining a few miscellaneous LaTeX quirks and tips that might be useful.
+	
+	\section{Document format}
+	These subsections discuss general formatting and the structure of the paper.
+	
+	\subsection{Page layout}
+	The style sheet requires single spaced text and 1-inch margins. Both of these things are automatically enforced by the document---no additional commands required!
+	
+	\subsection{Font}
+	The paper should be in a 12pt serif font. Again, this is automatically enforced, but note that the font in this template is not exactly Times New Roman. Times New Roman is proprietary, so it's more complicated to use it in LaTeX. Since the style sheet says ``a 12pt font like Times New Roman or Doulos SIL,'' I opted for the lookalike instead of actual TNR.
+	
+	This subsection also specifies that the text in any linguistic trees should match the rest of the document, and trees should be electronically generated. Trees are actually pretty simple in LaTeX (and they're free!) but for concision I describe how to generate trees in section 2.8.
+	
+	\subsection{Paragraph layout}
+	The first paragraph after a heading should not be indented; subsequent paragraphs should. This functionality is provided for you, but starting a new paragraph is a tiny bit different in LaTeX. Instead of pressing \textit{enter} and then \textit{tab}, you will simply press \textit{enter} twice. So, your paragraphs are separated by a blank line in the source file, but in the paper itself they follow the style we want.
+	
+	\subsection{Section headings} 
+	Here's the first LaTeX command you need! Commands are usually a \verb|\| backslash followed by a command name, and then some \verb|{}| curly braces with additional information inside. 
+	
+	All the formatting details of section headings are handled by this template, including numbering. To create a new section, just use the command \verb|\section{My section title}|. You can check out this document's source code to see exactly how I format it with blank lines, but it actually doesn't even matter if there are blank lines before/after the command. It'll format it correctly regardless. Then, start your next paragraphs and they will conform to the style too.
+	
+	Creating further subsections is easy too---use \verb|\subsection{My subsection title}| and \verb|\subsubsection{My subsubsection title}|. As mentioned above, the numbering happens automatically, you just need to worry about what your section title will be.
+	
+	\subsection{Title block}
+	
+	\subsection{Tables and figures}
+	
+	\subsection{Footnotes}
+\end{document}
