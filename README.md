@@ -2,7 +2,7 @@
 Implementing as many elements of the stylesheet as possible.
 
 ## Using This Template
-Here's some (hopefully comprehensive, eventually) instructions on how to use this template.
+Here's some instructions on how to use the template. They aren't completely comprehensive yet, but will get you pretty far.
 ### Never used LaTeX?
 I recommend making an account on [Overleaf](https://www.overleaf.com), which lets you write and preview LaTeX pretty easily. In the instructions below, I'll try to cover everything you need to know about LaTeX, so no need to do extra reading. Since the Ling Analysis papers probably won't use math equations or anything like that, and the template deals with formatting for you, the learning curve won't be terribly steep.
 ### Instructions
