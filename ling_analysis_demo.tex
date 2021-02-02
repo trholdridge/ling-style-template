@@ -4,6 +4,7 @@
 \usepackage[letterpaper, portrait, margin=1in]{geometry}
 \usepackage{newtxtext,newtxmath}
 \usepackage{titlesec}
+\usepackage[table,xcdraw]{xcolor}
 \usepackage{qtree}
 
 
@@ -37,7 +38,7 @@
 
 \begin{document}
 	
-	\headertext{Tulasi Holdridge}{Linguistic Analysis}{Dr. Littlefield}{Last Updated: January 28, 2021}
+	\headertext{Tulasi Holdridge}{Linguistic Analysis}{Dr. Littlefield}{Last Updated: February 2, 2021}
 	
 	\titletext{Linguistic Analysis Template Demo}
 	Each section of this document is correlated to a section of the Linguistic Analysis style sheet. It serves two purposes---first, ``proving'' that this template conforms to the style sheet; second, explaining and demonstrating how to use any features that are LaTeX-specific (such as formatting commands that a user will need to know).
@@ -69,6 +70,46 @@
 	Although this also requires LaTeX commands, they've been prefilled for you in the template. All formatting is handled by the commands, which are \verb|\headertext{}{}{}{}| and \verb|\titletext{}|. The curly braces are the only part you need to edit. For the header: the braces should contain your name, the course, the professor's name, and the date (in that order). For the title: the braces should contain the title of the paper.
 	
 	\subsection{Tables and figures}
+	Tables are a little more tricky in LaTeX---I recommend just generating them using an online resource like https://www.tablesgenerator.com.
+	
+	[more info to come on adding labels to tables/figures and changing font size]
 	
 	\subsection{Footnotes}
+	To add a footnote to your text, use the command \verb|\footnote{}|, putting your citation text in the curly braces. Here's an example.\footnote{Wow, a footnote!} Make sure to put the command exactly where you want it in the text, and no need for extra spaces around it. LaTeX will automatically number your footnotes, similar to the section headings.\footnote{Here's some proof.}
+	
+	\section{Using and formatting linguistic data}
+	This section has an extra subsection at the end, detailing how to generate trees.
+	
+	\subsection{Small segments of data in the text}
+	Small pieces of data like morphemes included in the prose of the paper should be in italics. To italicize something in LaTeX, use the command \verb|\textit{}|, with the italicized text inside the curly braces. Here's a \textit{demonstration}.
+	
+	\subsection{Longer pieces of data}
+	
+	\subsection{Interlinear glossing}
+	
+	\subsection{Glosses}
+	
+	\subsection{Parentheses}
+	
+	\subsection{Capitalization in examples}
+	
+	\subsection{Phonestic and phonemic material}
+	
+	\section{General punctuation}
+	This section of the style sheet just describes things you'll have to keep in mind while writing. If there is no information relevant to formatting and the use of LaTeX, the subsection will just say ``N/A.''
+	
+	\subsection{Quoting outside sources}
+	See section 6 for an aside about quotation marks in LaTeX.
+	
+	\subsection{Commas and periods}
+	N/A
+	
+	\section{List of abbreviations}
+	
+	\section{References and citations}
+	
+	\section{Miscellaneous LaTeX things}
+	
+	\section{Conclusion}
+	
 \end{document}

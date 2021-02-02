@@ -4,35 +4,36 @@
 \usepackage[letterpaper, portrait, margin=1in]{geometry}
 \usepackage{newtxtext,newtxmath}
 \usepackage{titlesec}
+\usepackage[table,xcdraw]{xcolor}
 \usepackage{qtree}
 
 
 \setlength{\parindent}{0.5in}
 
 \titleformat{\section}
-	{\normalfont\fontsize{12}{15}\bfseries}{\makebox[40pt][l]{\thesection}}{0pt}{}
+{\normalfont\fontsize{12}{15}\bfseries}{\makebox[40pt][l]{\thesection}}{0pt}{}
 \titleformat{\subsection}
-	{\normalfont\fontsize{12}{15}\bfseries}{\makebox[40pt][l]{\thesubsection}}{0pt}{}
+{\normalfont\fontsize{12}{15}\bfseries}{\makebox[40pt][l]{\thesubsection}}{0pt}{}
 \titleformat{\subsubsection}
-	{\normalfont\fontsize{12}{15}\bfseries}{\makebox[40pt][l]{\thesubsubsection}}{0pt}{}
-	
+{\normalfont\fontsize{12}{15}\bfseries}{\makebox[40pt][l]{\thesubsubsection}}{0pt}{}
+
 \titlespacing*{\section}{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
 \titlespacing*{\subsection}{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
 \titlespacing*{\subsubsection}{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
 
 
 \newcommand{\titletext}[1]
-	{\begin{center}
-			\textbf{#1}
-	\end{center}}
+{\begin{center}
+		\textbf{#1}
+\end{center}}
 
 \newcommand{\headertext}[4]
-	{\begin{flushleft}
-		   #1
+{\begin{flushleft}
+		#1
 		\\ #2
 		\\ #3
 		\\ #4
-	\end{flushleft}}
+\end{flushleft}}
 
 
 \begin{document}
