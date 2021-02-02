@@ -95,6 +95,25 @@
 	
 	\subsection{Phonestic and phonemic material}
 	
+	\subsection{Linguistic trees}
+	The template includes the \verb|qtree| package for you, which can be used to create trees.
+	Here's a basic example of the command for a tree, and the tree it generates:
+	
+	\verb|\Tree [.S This [.VP [.V is ] \qroof{a simple tree}.NP ] ]|
+	
+	\Tree [.S This [.VP [.V is ] \qroof{a simple tree}.NP ] ]
+	
+	As you can see, the font and text size are automatically correct. The command for the tree looks a bit complicated, but it might help to break it into lines which more clearly show its structure:
+	
+	\begin{verbatim}
+		\Tree [.S This
+		          [.VP [.V is ]
+		               \qroof{a simple tree}.NP ] ]
+	\end{verbatim}
+
+	You can trial-and-error your way through making similar trees, or read the qtree documentation at https://www.ling.upenn.edu/advice/latex/qtree/qtreenotes.pdf for additional help. Just make sure you put a space before each \verb|]| closing bracket, or it'll break.
+	
+	
 	\section{General punctuation}
 	This section of the style sheet just describes things you'll have to keep in mind while writing. If there is no information relevant to formatting and the use of LaTeX, the subsection will just say ``N/A.''
 	
