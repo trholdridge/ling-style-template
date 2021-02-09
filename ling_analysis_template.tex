@@ -4,6 +4,7 @@
 \usepackage[letterpaper, portrait, margin=1in]{geometry}
 \usepackage{newtxtext,newtxmath}
 \usepackage{titlesec}
+\usepackage{hanging}
 \usepackage[table,xcdraw]{xcolor}
 \usepackage{qtree}
 
@@ -35,11 +36,19 @@
 		\\ #4
 \end{flushleft}}
 
+\newenvironment{references}
+{\begin{hangparas}{0.5in}{1}}
+	{\\ \end{hangparas}}
+
 
 \begin{document}
 
 \headertext{Author Name}{Course Title}{Professor Name}{Date}
 
 \titletext{My Title}
+
+\section{References}
+\begin{references}
+\end{references}
 	
 \end{document}

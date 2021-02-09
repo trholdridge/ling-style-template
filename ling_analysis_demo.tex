@@ -4,6 +4,7 @@
 \usepackage[letterpaper, portrait, margin=1in]{geometry}
 \usepackage{newtxtext,newtxmath}
 \usepackage{titlesec}
+\usepackage{hanging}
 \usepackage[table,xcdraw]{xcolor}
 \usepackage{qtree}
 
@@ -34,6 +35,10 @@
 		\\ #3
 		\\ #4
 \end{flushleft}}
+
+\newenvironment{references}
+{\begin{hangparas}{0.5in}{1}}
+	{\\ \end{hangparas}}
 
 
 \begin{document}
@@ -126,6 +131,9 @@
 	\section{List of abbreviations}
 	
 	\section{References and citations}
+	The command \verb|\begin{references}| will create an ``environment'' where every paragraph has hanging indents. At the end of the section, use \verb|\end{references}|. The section is already set up for you in the template---just put your citations between the begin and end tags.
+	
+	In terms of writing the citations themselves, you'll have to use the style sheet and type the exact words of the citation, making sure to use \verb|\textit{}| to italicize any necessary parts.
 	
 	\section{Miscellaneous LaTeX things}
 	
