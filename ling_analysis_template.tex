@@ -12,15 +12,26 @@
 \setlength{\parindent}{0.5in}
 
 \titleformat{\section}
-{\normalfont\fontsize{12}{15}\bfseries}{\makebox[40pt][l]{\thesection}}{0pt}{}
+{\normalfont\fontsize{12}{15}\bfseries}{\makebox[0.5in][l]{\thesection}}{0pt}{}
 \titleformat{\subsection}
-{\normalfont\fontsize{12}{15}\bfseries}{\makebox[40pt][l]{\thesubsection}}{0pt}{}
+{\normalfont\fontsize{12}{15}\bfseries}{\makebox[0.5in][l]{\thesubsection}}{0pt}{}
 \titleformat{\subsubsection}
-{\normalfont\fontsize{12}{15}\bfseries}{\makebox[40pt][l]{\thesubsubsection}}{0pt}{}
+{\normalfont\fontsize{12}{15}\bfseries}{\makebox[0.5in][l]{\thesubsubsection}}{0pt}{}
 
-\titlespacing*{\section}{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
-\titlespacing*{\subsection}{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
-\titlespacing*{\subsubsection}{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+\titlespacing*{\section}{0pt}{12pt}{0pt}
+\titlespacing*{\subsection}{0pt}{12pt}{0pt}
+\titlespacing*{\subsubsection}{0pt}{12pt}{0pt}
+
+
+\newcounter{data}
+\newenvironment{data}
+{\refstepcounter{data}\bigskip\par\noindent%
+	\makebox[0.5in][l]{(\thedata)}}
+	{\bigskip\par\noindent\ignorespacesafterend}
+
+\newcounter{letter}
+\newenvironment{letter}
+{\refstepcounter{letter}\makebox[0.5in][l]{\theletter.}}{}
 
 
 \newcommand{\titletext}[1]
@@ -47,8 +58,21 @@
 
 \titletext{My Title}
 
+\section{test}
+this is a test of the data format
+
+with a second paragraph to compare indents
+\begin{data}
+screm I hate spacing
+
+\begin{letter}
+	testing again
+\end{letter}
+\end{data}
+and now there's a paragraph after it
+
 \section{References}
-\begin{references}
-\end{references}
+%\begin{references}
+%\end{references}
 	
 \end{document}
