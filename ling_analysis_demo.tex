@@ -18,9 +18,30 @@
 \titleformat{\subsubsection}
 {\normalfont\fontsize{12}{15}\bfseries}{\makebox[0.5in][l]{\thesubsubsection}}{0pt}{}
 
-\titlespacing*{\section}{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
-\titlespacing*{\subsection}{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
-\titlespacing*{\subsubsection}{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+\titlespacing*{\section}{0pt}{12pt}{0pt}
+\titlespacing*{\subsection}{0pt}{12pt}{0pt}
+\titlespacing*{\subsubsection}{0pt}{12pt}{0pt}
+
+
+\newcounter{data}
+\newenvironment{data}{%
+	\refstepcounter{data}%
+	\setcounter{letter}{0}%
+	\bigskip\par\noindent%
+	\makebox[0.5in][l]{(\thedata)}%
+	\ignorespaces%
+}{%
+	\ignorespacesafterend%
+}
+
+\newcounter{letter}
+\newenvironment{letter}{%
+	\refstepcounter{letter}%
+	\makebox[0.5in][l]{\alph{letter}.}%
+	\ignorespaces%
+}{%
+	\ignorespacesafterend%
+}
 
 
 \newcommand{\titletext}[1]
@@ -36,9 +57,11 @@
 		\\ #4
 \end{flushleft}}
 
-\newenvironment{references}
-{\begin{hangparas}{0.5in}{1}}
-	{\\ \end{hangparas}}
+\newenvironment{references}{%
+	\begin{hangparas}{0.5in}{1}
+	}{%
+		\\ \end{hangparas}%
+}
 
 
 \begin{document}
@@ -89,6 +112,30 @@
 	Small pieces of data like morphemes included in the prose of the paper should be in italics. To italicize something in LaTeX, use the command \verb|\textit{}|, with the italicized text inside the curly braces. Here's a \textit{demonstration}.
 	
 	\subsection{Longer pieces of data}
+	This is a bit trickier. Use \verb|\begin{data}| to create a new numbered piece of data (numbering won't reset within the paper). Then type in your data, but don't leave a blank line under the command unless you want it to start a new paragraph. If you want sub-data to be lettered, use \verb|\begin{letter}| followed by the data you want. Lettering is reset within each numbered data section. Close off both tags with their respective \verb|\end{}| commands. 
+	
+	If you're going from data back to prose, you'll need to add the command \verb|\bigskip|. Then press enter twice, then use the command \verb|\noindent|, then start writing your next paragraph. If you instead end the section or subsection without going back to prose, you \textit{do not} need these commands. Here's an example of how the data looks (view the .tex file of this PDF to see exactly how I formatted the commands):
+	
+	\begin{data}
+		\begin{letter}
+			This is my first piece of data
+		\end{letter}
+	
+		\begin{letter}
+			This is my second piece of data.
+		\end{letter}
+	\end{data}
+	\begin{data}
+		\begin{letter}
+			And a bit more data.
+		\end{letter}
+	\end{data}
+	\begin{data}
+		Of course, you can also have data without lettering.
+	\end{data}
+	\bigskip
+
+	\noindent See the next section for guidance on formatting interlinear glosses, or other data which is aligned in complicated ways.
 	
 	\subsection{Interlinear glossing}
 	Use \verb|\textsc{}| for small caps in your glosses, \textsc{like so}.

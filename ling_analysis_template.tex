@@ -24,14 +24,24 @@
 
 
 \newcounter{data}
-\newenvironment{data}
-{\refstepcounter{data}\bigskip\par\noindent%
-	\makebox[0.5in][l]{(\thedata)}}
-	{\bigskip\par\noindent\ignorespacesafterend}
+\newenvironment{data}{%
+	\refstepcounter{data}%
+	\setcounter{letter}{0}%
+	\bigskip\par\noindent%
+	\makebox[0.5in][l]{(\thedata)}%
+	\ignorespaces%
+}{%
+	\ignorespacesafterend%
+}
 
 \newcounter{letter}
-\newenvironment{letter}
-{\refstepcounter{letter}\makebox[0.5in][l]{\theletter.}}{}
+\newenvironment{letter}{%
+	\refstepcounter{letter}%
+	\makebox[0.5in][l]{\alph{letter}.}%
+	\ignorespaces%
+}{%
+	\ignorespacesafterend%
+}
 
 
 \newcommand{\titletext}[1]
@@ -47,9 +57,11 @@
 		\\ #4
 \end{flushleft}}
 
-\newenvironment{references}
-{\begin{hangparas}{0.5in}{1}}
-	{\\ \end{hangparas}}
+\newenvironment{references}{%
+	\begin{hangparas}{0.5in}{1}
+	}{%
+		\\ \end{hangparas}%
+}
 
 
 \begin{document}
@@ -62,14 +74,18 @@
 this is a test of the data format
 
 with a second paragraph to compare indents
-\begin{data}
-screm I hate spacing
-
+\begin{data}	
 \begin{letter}
 	testing again
 \end{letter}
+
+\begin{letter}
+	aaaaand again
+\end{letter}
 \end{data}
-and now there's a paragraph after it
+\bigskip
+
+\noindent and now there's a paragraph after it
 
 \section{References}
 %\begin{references}
